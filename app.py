@@ -61,6 +61,12 @@ def main():
     """
     Streamlit app for generating blog post drafts.
     """
+    st.set_page_config(page_title = "Blog Generator", page_icon="✍️")
+    created_style = """
+    color: #888888; /* Light gray color */
+    font-size: 99px; /* Increased font size */
+"""
+    st.markdown("<p style='{}'>➡️created by 'Muhammad Zain Attiq'</p>".format(created_style), unsafe_allow_html=True)
     st.title("Blog Post Generator")
     with st.sidebar:
         input_api_key = st.text_input("Enter your OpenAI API Key: ")
